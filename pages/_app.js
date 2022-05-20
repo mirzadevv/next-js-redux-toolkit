@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import NavBar from "../components/navBar";
+import { wrapper } from "../store/index";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,4 +11,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);
