@@ -4,6 +4,11 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const { todos } = useSelector((state) => state.todos);
+  const {
+    users: {
+      users: { users },
+    },
+  } = useSelector((state) => state.users);
 
   return (
     <div className={styles.container}>
@@ -14,10 +19,18 @@ export default function Home() {
       </Head>
 
       <h2>Todos State</h2>
-      <div className={styles.todosContainer}>
+      <div className={styles.itemsContainer}>
         {todos.length === 0 && <h4> THERE ARE NO TODOS </h4>}
         {todos.map((todo) => (
           <h4 key={todo.id}>{todo.title}</h4>
+        ))}
+      </div>
+
+      <h2>Users States</h2>
+      <div className={styles.itemsContainer}>
+        {users.length === 0 && <h4> THERE ARE NO USERS </h4>}
+        {users.map((user) => (
+          <h4 key={user.id}>{user.name}</h4>
         ))}
       </div>
     </div>
