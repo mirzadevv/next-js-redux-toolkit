@@ -12,17 +12,12 @@ export default function NavBar() {
           </Link>
           <Link href="/todos">
             <a>
-              <li>Todos (CSR)</li>
+              <li>Todos</li>
             </a>
           </Link>
           <Link href="/users">
             <a>
-              <li>Users (SSR)</li>
-            </a>
-          </Link>
-          <Link href="/posts">
-            <a>
-              <li>Posts (SSG)</li>
+              <li>Users</li>
             </a>
           </Link>
         </ul>
