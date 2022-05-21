@@ -5,6 +5,11 @@ export default function NavBar() {
     <>
       <div className={styles.navContainer}>
         <ul>
+          <Link href="/">
+            <a>
+              <li>Index</li>
+            </a>
+          </Link>
           <Link href="/todos">
             <a>
               <li>Todos (CSR)</li>
